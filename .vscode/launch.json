@@ -5,10 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Open index.html",
       "type": "chrome",
-      "request": "attach",
-      "port": 5500,
-      "name": "Open index.html"
+      "request": "launch",
+      "runtimeExecutable": "canary",
+      "runtimeArgs": ["--auto-open-devtools-for-tabs"],
+      "userDataDir": false,
+      "file": "${workspaceFolder}/index.html"
     }
   ]
 }
