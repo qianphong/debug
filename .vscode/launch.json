@@ -5,13 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Open index.html",
+      "name": "启动项目",
+      "request": "launch",
+      "runtimeArgs": ["run-script", "dev"],
+      "runtimeExecutable": "npm",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
+    {
+      "name": "调试项目",
       "type": "chrome",
       "request": "launch",
-      "runtimeExecutable": "canary",
       "runtimeArgs": ["--auto-open-devtools-for-tabs"],
-      "userDataDir": false,
-      "file": "${workspaceFolder}/index.html"
+      "userDataDir": "C:/Users/qian/Documents/Chrome debug",
+      "file": "${workspaceFolder}/index.html",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }
