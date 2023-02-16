@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>worker performance optimization</title>
+  </head>
+  <body>
+    <div>
+      <button>点击</button>
+    </div>
+    <script>
+      const btn = document.querySelector('button')
+      btn.onclick = function () {
+        const arr = new Array(1000000)
+        console.log(arr)
+      }
+    </script>
+  </body>
+</html>
