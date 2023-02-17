@@ -20,6 +20,15 @@
       "userDataDir": "C:/Users/qian/Documents/Chrome debug",
       "file": "${workspaceFolder}/index.html",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "调试 performance",
+      "type": "chrome",
+      "request": "launch",
+      "runtimeArgs": ["--auto-open-devtools-for-tabs"],
+      "userDataDir": "C:/Users/qian/Documents/Chrome debug",
+      "file": "${workspaceFolder}/performance.html",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

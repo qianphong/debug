@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <title>worker performance optimization</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        will-change: transform;
+      }
+      .box.transform {
+        transform: translate(100px, 100px);
+      }
+      .box.position {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+      }
+    </style>
   </head>
   <body>
     <div>
-      <button>点击</button>
+      <button data-type="position">position</button>
+      <button data-type="transform">transform</button>
+      <div class="box"></div>
     </div>
     <script>
-      const btn = document.querySelector('button')
-      btn.onclick = function () {
-        const arr = new Array(1000000)
-        console.log(arr)
-      }
+      const btn = document.querySelectorAll('button')
+      const box = document.querySelector('.box')
+      btn.forEach(item => {
+        item.onclick = function () {
+          const type = this.dataset.type
+          box.classList.remove('transform', 'position')
+          box.classList.add(type)
+        }
+      })
     </script>
   </body>
 </html>
